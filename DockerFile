@@ -1,0 +1,9 @@
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+
+COPY target/Project-Elective-0.0.1-SNAPSHOT.jar /app
+
+EXPOSE 8084
+
+CMD ["java", "-jar", "Project-Elective-0.0.1-SNAPSHOT.jar", "--spring.profiles.active=docker"]
