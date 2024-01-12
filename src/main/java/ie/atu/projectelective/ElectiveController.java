@@ -25,4 +25,10 @@ public class ElectiveController {
     public @ResponseBody List<Elective> getElective(){
         return electiveService.getElectives();
     }
+
+    @PostMapping("elective-request")
+    public String electiveRequest(@RequestBody Course course, @RequestBody StudentClass studentClass){
+        return String.format("Received Request for %s %s. Student is registered for the course %s, code: %s",
+                studentClass.getFirstname(), studentClass.getSurname(), course.getCourseName(), course.getCourseCode());
+    }
 }

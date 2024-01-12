@@ -1,5 +1,6 @@
 package ie.atu.projectelective;
 
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ public class ElectiveService {
     private final List<Elective> electives = new ArrayList<>();
 
     public void chooseElectives(Elective elective){
+
         electives.add(elective);
     }
 
